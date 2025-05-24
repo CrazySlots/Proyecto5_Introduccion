@@ -13,33 +13,10 @@ import Contact from './components/contact'
 
 function App() {
   const [count, setCount] = useState(0)
-  let Site 
-    switch(window.location.pathname){
-        case "/":
-          site =Home
-        case "/produsct":
-          site=Products
-          break
-        case "/whoAreWe":
-          site=WhoAreWe
-          break
-        case "/about":
-          site=About
-          break
-        case "/vendors":
-          site=Vendors
-          break
-        case "/clients":
-          site=Clients
-          break
-        case "/contact":
-          site=Contact
-          break
-    }
   return (
     <>
       <TopNav />
-      <Site />
+      
     </>
   )
 }
