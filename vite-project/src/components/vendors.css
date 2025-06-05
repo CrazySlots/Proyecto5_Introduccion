@@ -1,0 +1,39 @@
+.vendor-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.vendor-card {
+  width: 220px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.vendor-card:hover {
+  transform: scale(1.05);
+  border-color: red;
+}
+
+.vendor-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.vendor-card h3 {
+  margin: 10px 0 5px;
+}
+
+.vendor-card p {
+  padding: 0 10px 10px;
+  font-size: 0.9rem;
+  color: #555;
+}

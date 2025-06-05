@@ -1,0 +1,48 @@
+.client-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.client-card {
+  width: 220px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.client-card:hover {
+  transform: scale(1.05);
+  border-color: red;
+}
+
+.client-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.client-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+}
+
+.red-line {
+  width: 60px;
+  height: 4px;
+  background-color: red;
+  margin: 0 auto 10px;
+  border-radius: 2px;
+}
+
+.client-card p {
+  padding: 0 10px 15px;
+  font-size: 0.9rem;
+  color: #555;
+}

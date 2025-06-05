@@ -1,16 +1,24 @@
+body{
+    margin-top: 60px;
+    font-size: 17px;
+}
 .topNav{
-    position: sticky;
+    position: fixed;
     background-color: black;
     overflow: hidden;
     display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 .topNav a{
     float: left;
     color: white;
     text-align: center;
-    padding: 20px 16px;
+    padding: 1rem;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1rem;
     
 }
 .topNav a:hover{
@@ -18,23 +26,46 @@
     background-color: white;
 }
 .logo img{
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     object-fit: contain;
 }
 .whoAreWe{
     position:relative;
-
 }
+h2{
+    padding: 2rem;
+}
+.about,.products,.vendors,.clients h2{
+    padding: 2rem;
+}
+.whoAreWe-container{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    flex-wrap: wrap;
+    padding: 3rem;
+}
+.foto {
+    position: relative; /* Needed for absolute children to position correctly */
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+}
+
 .foto img{
-    width: 700px;
+    width: 100%;
+    max-width: 300px;
     display: block;
     object-fit: contain;
 }
-.text-hover-image{
+.text-hover-image, .name-hover-image, .carnet-hover-image{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width:  100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
     color: white;
@@ -44,10 +75,91 @@
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-.whoAreWe:hover .text-hover-image{
-    opacity: 1;
+
+.name-text,.carnet-text,.description-text{
+    width: 220px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, border 0.3s ease;
 }
 
+.name-text:hover,.carnet-text:hover,.description-text:hover{
+    transform: scale(1.05);
+    color: red;
+}
+
+.name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:  100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+.carnet{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:  100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+.description{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:  100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+.list-foto{
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    text-align: center;
+}
+.about{
+    position: relative;
+       
+}
+ .card{
+    margin: 0 auto 1rem;
+    padding: 1rem;
+    color: white;
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 .footer{
     color: white;
     background-color: black;
@@ -56,7 +168,7 @@
     bottom: 0;
 }
 .footer p{
-    padding: 50px;
+    padding:0.5rem;
     margin-left: auto;
 
 ;}
